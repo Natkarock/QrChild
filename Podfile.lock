@@ -1,0 +1,20 @@
+PODS:
+  - BubbleTransition (2.0.2)
+  - YouTubePlayer (0.4.0)
+
+DEPENDENCIES:
+  - BubbleTransition (~> 2.0.0)
+  - YouTubePlayer
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BubbleTransition
+    - YouTubePlayer
+
+SPEC CHECKSUMS:
+  BubbleTransition: 7d98ed7d56f0940e83f350a98103ad473491c769
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
+
+PODFILE CHECKSUM: cd98bc5b7ed509410be5076f2114bfb459bad888
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="QRChild" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS0-dS-cpG">
+                                <rect key="frame" x="98" y="313.5" width="179" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1As-t2-QES"/>
+                                    <constraint firstAttribute="width" constant="179" id="YaD-cL-RoQ"/>
+                                </constraints>
+                                <state key="normal" title="Сканировать QRCode">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="qrBtnActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5X-14-xDt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Описание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqK-P1-1Gr">
+                                <rect key="frame" x="16" y="289" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1817948103" green="0.45098039220000002" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aS0-dS-cpG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D9u-IP-VbH"/>
+                            <constraint firstItem="aS0-dS-cpG" firstAttribute="top" secondItem="lqK-P1-1Gr" secondAttribute="bottom" constant="8.5" id="HAB-2i-F9F"/>
+                            <constraint firstItem="aS0-dS-cpG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XJX-sE-Yhe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lqK-P1-1Gr" secondAttribute="trailing" constant="16" id="XYO-jO-5gH"/>
+                            <constraint firstItem="lqK-P1-1Gr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="omj-Uz-FYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main" id="if0-hY-zoC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--ScanVC-->
+        <scene sceneID="it4-gQ-7Qd">
+            <objects>
+                <viewController storyboardIdentifier="ScanVC" id="oOK-ea-Hik" customClass="ScanVC" customModule="QRChild" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HAl-6J-fvn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7Od-qY-Zax">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BSb-Dw-9Ih"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QL-GB-ErI">
+                                <rect key="frame" x="0.0" y="86" width="375" height="39"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="To Youtube">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                </variation>
+                                <connections>
+                                    <action selector="youtubeBtnActionWithSender:" destination="oOK-ea-Hik" eventType="touchUpInside" id="Zjl-Cp-hGD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xQ-Ce-PxI">
+                                <rect key="frame" x="319" y="36" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2NB-al-XN9"/>
+                                    <constraint firstAttribute="width" constant="40" id="32c-Qp-BqV"/>
+                                </constraints>
+                                <state key="normal" image="icon_close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeWithSender:" destination="oOK-ea-Hik" eventType="touchUpInside" id="vvs-xp-QyD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.45098039215686275" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7xQ-Ce-PxI" firstAttribute="top" secondItem="mwK-C6-2vO" secondAttribute="top" constant="16" id="CFq-j2-yw8"/>
+                            <constraint firstItem="5QL-GB-ErI" firstAttribute="top" secondItem="7xQ-Ce-PxI" secondAttribute="bottom" constant="10" id="OwT-fz-j20"/>
+                            <constraint firstItem="7Od-qY-Zax" firstAttribute="leading" secondItem="mwK-C6-2vO" secondAttribute="leading" id="X6h-6O-nVD"/>
+                            <constraint firstItem="7Od-qY-Zax" firstAttribute="bottom" secondItem="mwK-C6-2vO" secondAttribute="bottom" id="dYO-jU-7RT"/>
+                            <constraint firstItem="mwK-C6-2vO" firstAttribute="trailing" secondItem="5QL-GB-ErI" secondAttribute="trailing" id="mdR-VC-o93"/>
+                            <constraint firstItem="5QL-GB-ErI" firstAttribute="leading" secondItem="mwK-C6-2vO" secondAttribute="leading" id="op8-j7-pMK"/>
+                            <constraint firstItem="mwK-C6-2vO" firstAttribute="trailing" secondItem="7Od-qY-Zax" secondAttribute="trailing" id="sES-C3-N2m"/>
+                            <constraint firstItem="mwK-C6-2vO" firstAttribute="trailing" secondItem="7xQ-Ce-PxI" secondAttribute="trailing" constant="16" id="slv-g9-J8A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mwK-C6-2vO"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnClose" destination="7xQ-Ce-PxI" id="kjZ-Nx-3TD"/>
+                        <outlet property="messageLabel" destination="7Od-qY-Zax" id="Nc7-fd-NaR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5n-Hi-ul5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="132.68365817091455"/>
+        </scene>
+        <!--YoutubeVC-->
+        <scene sceneID="rlz-hn-a5p">
+            <objects>
+                <viewController storyboardIdentifier="YoutubeVC" id="BOH-sx-fZ9" customClass="YoutubeVC" customModule="QRChild" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WGj-sC-r6u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAz-ap-ZDq" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="0.0" y="233.5" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.1843137255" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="wBh-uB-HLl"/>
+                                </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="wBh-uB-HLl"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS2-4N-VE4">
+                                <rect key="frame" x="319" y="36" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="EtE-E7-r7b"/>
+                                    <constraint firstAttribute="height" constant="40" id="ioo-Ue-t5R"/>
+                                </constraints>
+                                <state key="normal" image="icon_close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeWithSender:" destination="BOH-sx-fZ9" eventType="touchUpInside" id="2ch-uA-BIt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MAz-ap-ZDq" firstAttribute="leading" secondItem="I9Y-TD-Ins" secondAttribute="leading" id="0aO-kv-mJM"/>
+                            <constraint firstItem="I9Y-TD-Ins" firstAttribute="trailing" secondItem="cS2-4N-VE4" secondAttribute="trailing" constant="16" id="4VT-2l-NfI"/>
+                            <constraint firstItem="MAz-ap-ZDq" firstAttribute="centerY" secondItem="WGj-sC-r6u" secondAttribute="centerY" id="ZEw-Sf-3rl"/>
+                            <constraint firstItem="cS2-4N-VE4" firstAttribute="top" secondItem="I9Y-TD-Ins" secondAttribute="top" constant="16" id="f7M-ja-SJI"/>
+                            <constraint firstItem="MAz-ap-ZDq" firstAttribute="height" secondItem="WGj-sC-r6u" secondAttribute="height" id="lOP-Jb-YJe"/>
+                            <constraint firstItem="MAz-ap-ZDq" firstAttribute="trailing" secondItem="I9Y-TD-Ins" secondAttribute="trailing" id="yy6-DS-0Xr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I9Y-TD-Ins"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lOP-Jb-YJe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="lOP-Jb-YJe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnClose" destination="cS2-4N-VE4" id="rvj-EX-Y0Z"/>
+                        <outlet property="youtubeView" destination="MAz-ap-ZDq" id="SDq-dC-gPJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Amg-ze-q6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2693.5999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_close" width="20" height="20"/>
+    </resources>
+</document>
